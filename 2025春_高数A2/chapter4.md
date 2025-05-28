@@ -25,7 +25,7 @@ vlook-query: ws=off
 > [!TIP]
 >
 > - **标量场(scalar field)**:一个仅用其大小就可以完整表征的场
-> - **向量场(vector field)**:在空间的每一个点都和一个向量相关联的场
+> - **向量场(mathbftor field)**:在空间的每一个点都和一个向量相关联的场
 > > **判断**
 > > > 引力场：向量场
 > > > 密度场：标量场
@@ -87,17 +87,17 @@ vlook-query: ws=off
 
 > [!important]
 > 
-> 设向量场 $\vec{F}(x,y) = P(x,y)\hat{i} + Q(x,y)\hat{j}$ 表示平面力场，质点沿曲线 $L$ 运动时力所做的功 $W$ 定义为：  
+> 设向量场 $\mathbf{F}(x,y) = P(x,y)\mathbf{i} + Q(x,y)\mathbf{j}$ 表示平面力场，质点沿曲线 $L$ 运动时力所做的功 $W$ 定义为：  
 > $$
-> \displaystyle W = \int_{L} \vec{F} \cdot \mathrm{d}\vec{r} = \lim_{N \to \infty} \sum_{i=1}^{N} \vec{F}_i \cdot \Delta \vec{r}_i
+> \displaystyle W = \int_{L} \mathbf{F} \cdot \mathrm{d}\mathbf{r} = \lim_{N \to \infty} \sum_{i=1}^{N} \mathbf{F}_i \cdot \Delta \mathbf{r}_i
 > $$
-> 其中 $\mathrm{d}\vec{r} = (\mathrm{d}x, \mathrm{d}y)^T$ 为位移微分向量.通过分解点积可得：
+> 其中 $\mathrm{d}\mathbf{\mathbf{r}} = (\mathrm{d}x, \mathrm{d}y)^T$ 为位移微分向量.通过分解点积可得：
 > $$
 > W = \int_{L} P(x,y) \, \mathrm{d}x + Q(x,y) \, \mathrm{d}y
 > $$
 > 若曲线 $L$ 由参数方程 $\begin{cases} x = x(t) \\ y = y(t) \end{cases}$ 描述，且 $x(t), y(t)$ 在 $[t_1, t_2]$ 上一阶可导并满足 $[x'(t)]^2 + [y'(t)]^2 \neq 0$（保证曲线光滑），则位移微分可表示为：
 > $$
-> \mathrm{d}\vec{r} = \left( x'(t)\hat{i} + y'(t)\hat{j} \right) \mathrm{d}t
+> \mathrm{d}\mathbf{r} = \left( x'(t)\mathbf{i} + y'(t)\mathbf{j} \right) \mathrm{d}t
 > $$
 > 将参数方程代入积分表达式，第二类曲线积分可转化为对参数 $t$ 的定积分：
 > $$
@@ -109,12 +109,12 @@ vlook-query: ws=off
 
 >[!note]
 >
-> > **例1:计算$\displaystyle  W = \int_{L} \vec{F} \cdot \mathrm{d}\vec{r}$,其中$F=-y\hat{i}+x\hat{j}$,$x=t,y=t^2$.**
+> > **例1:计算$\displaystyle  W = \int_{L} \mathrm{F}\cdot \mathrm{d}\mathbf{r}$,其中$F=-y\mathbf{i}+x\mathbf{j}$,$x=t,y=t^2$.**
 > >
 > > **解:**具体过程如下
 > >  $$
 > > \begin{aligned}
-> > W &= \int_{L} \vec{F} \cdot \mathrm{d}\vec{r}\\
+> > W &= \int_{L} \mathbf{F} \cdot \mathrm{d}\mathbf{r}\\
 > > &= \int_L-y\mathrm{d}x+x\mathrm{d}y\\
 > > &= \int_0^1-y\mathrm{d}t+x \cdot 2t\mathrm{d}t\\
 > > &= \int_0^1(-t^2+2t^2)\mathrm{d}t\\
@@ -126,8 +126,8 @@ vlook-query: ws=off
 > >  若改为
 > > $$
 > > \begin{cases}
-> > x=sin \theta  \\
-> > y=sin^2 \theta
+> > x=\sin \theta  \\
+> > y=\sin^2 \theta
 > > \end{cases},0\leq\theta\leq \frac{\pi}{2}
 > > $$
 > >  积分结果不变
@@ -162,11 +162,11 @@ vlook-query: ws=off
 > > 图
 > > **解:**由题意，力的表达式为：  
 > > $$
-> > \overrightarrow{F} = -k(x\mathbf{i} + y\mathbf{j}),
+> > \mathbf{F} = -k(x\mathbf{i} + y\mathbf{j}),
 > > $$
 > > 其中 $ k > 0 $ 为比例常数。功的表达式为：  
 > > $$
-> > W = \int_{AB} \overrightarrow{F} \cdot \mathrm{d}\mathbf{r} = -k \int_{AB} (x\mathrm{d}x + y\mathrm{d}y).
+> > W = \int_{AB} \mathbf{F} \cdot \mathrm{d}\mathbf{r} = -k \int_{AB} (x\mathrm{d}x + y\mathrm{d}y).
 > > $$
 > > 利用椭圆的参数方程：  
 > > $$
@@ -177,7 +177,7 @@ vlook-query: ws=off
 > > $$
 > > 计算微分：  
 > > $$
-> > dx = -a \sin \theta\mathrm{d}\theta, \quad dy = b \cos \theta\mathrm{d}\theta.
+> > \mathrm{d}x = -a \sin \theta\mathrm{d}\theta, \mathrm{d}y = b \cos \theta\mathrm{d}\theta.
 > > $$
 > > 代入积分式：  
 > > $$
@@ -195,12 +195,12 @@ vlook-query: ws=off
 > [!important]
 >
 > ==闭合路径的曲线积分计算==  
-> 考虑向量场 $\vec{F}(x,y) = y\hat{i} + x\hat{j}$ 沿闭合路径 $C = C_1 \cup C_2 \cup C_3$ 的积分计算：
+> 考虑向量场 $\mathbf{F}(x,y) = y\mathbf{i} + x\mathbf{j}$ 沿闭合路径 $C = C_1 \cup C_2 \cup C_3$ 的积分计算：
 >
 > **1. 路径分解**  
 > 将闭合路径分解为三部分：
 > 
-> - $C_1$：从 $(a,0)$ 到 $(a,0)$ 的零长度路径，对应积分 $\displaystyle\int_{C_1} \vec{F} \cdot \mathrm{d}\vec{r} = 0$  
+> - $C_1$：从 $(a,0)$ 到 $(a,0)$ 的零长度路径，对应积分 $\displaystyle\int_{C_1} \mathbf{F} \cdot \mathrm{d}\mathbf{r} = 0$  
 > - $C_2$：沿圆弧从 $(a,0)$ 到 $(\frac{\sqrt{2}}{2}a, \frac{\sqrt{2}}{2}a)$，参数化为：
 >   $$
 >   \begin{cases} 
@@ -219,20 +219,20 @@ vlook-query: ws=off
 >   **对圆弧路径 $C_2$**:微分计算得 $\mathrm{d}x = -a\sin\theta \mathrm{d}\theta$，$\mathrm{d}y = a\cos\theta \mathrm{d}\theta$，积分展开为：
 > $$
 > \begin{aligned}
-> \int_{C_2}\vec{F} \cdot \mathrm{d}\vec{r}
-> &= \int_0^{\frac{\pi}{4}}(-yasin\theta+xacos\theta)\mathrm{d}\theta \\
-> &=\int_0^{\frac{\pi}{4}}(-a^2sin^2\theta+a^2cos^2\theta)\mathrm{d}\theta \\
-> &= a^2\int_0^{\frac{\pi}{4}}\frac{1+cos2\theta-1+cos2\theta}{2}\mathrm{d}\theta \\
-> &=\frac{a^2}{2}\int_0^{\frac{\pi}{4}}cos2\theta\mathrm{d}\theta \\
-> &=\frac{a^2}{2}\left[sin2\theta\right]_0^{\frac{\pi}{4}} \\
+> \int_{C_2}\mathbf{F} \cdot \mathrm{d}\mathbf{r}
+> &= \int_0^{\frac{\pi}{4}}(-ya\sin\theta+xa\cos\theta)\mathrm{d}\theta \\
+> &=\int_0^{\frac{\pi}{4}}(-a^2\sin^2\theta+a^2\cos^2\theta)\mathrm{d}\theta \\
+> &= a^2\int_0^{\frac{\pi}{4}}\frac{1+\cos2\theta-1+\cos2\theta}{2}\mathrm{d}\theta \\
+> &=\frac{a^2}{2}\int_0^{\frac{\pi}{4}}\cos2\theta\mathrm{d}\theta \\
+> &=\frac{a^2}{2}\left[\sin2\theta\right]_0^{\frac{\pi}{4}} \\
 > &=\frac{a^2}{2}
 > \end{aligned}
 > $$
-> **对直线路径 $C_3$**:微分计算得 $\mathrm{d}x = \mathrm{d}y = -\frac{\sqrt{2}}{2}\mathrm{d}t$，积分展开为：
+> **对直线路径 $C_3$**:微分计算得 $\displaystyle \mathrm{d}x = \mathrm{d}y = -\frac{\sqrt{2}}{2}\mathrm{d}t$，积分展开为：
 >$$
 > \begin{aligned}
 > \int_{C_3}y\mathrm{d}x+x\mathrm{d}y
-> &=-\frac{\sqrt{2}}{2}\int_{C_3}(\frac{\sqrt{2}}{2}a-\frac{\sqrt{2}}{2}t)\mathrm{d}t+(\frac{\sqrt{2}}{2}a-\frac{\sqrt{2}}{2}t)\mathrm{d}t\\
+> &=-\frac{\sqrt{2}}{2}\int_{C_3} \left( \frac{\sqrt{2}}{2}a-\frac{\sqrt{2}}{2}t\right)\mathrm{d}t+\left(\frac{\sqrt{2}}{2}a-\frac{\sqrt{2}}{2}t\right)\mathrm{d}t\\
 > &=\int_0^a(t-a)\mathrm{d}t\\
 > &=\left[\frac{1}{2}t^2-at\right]_0^a\\
 > &=-\frac{a^2}{2}\\
@@ -241,7 +241,7 @@ vlook-query: ws=off
 > **3. 积分求和**  
 > 计算结果为：
 > $$
->\oint_C \vec{F} \cdot \mathrm{d}\vec{r} = 0 + \frac{a^2}{2} - \frac{a^2}{2} = 0
+>\oint_C \mathbf{F} \cdot \mathrm{d}\mathbf{r} = 0 + \frac{a^2}{2} - \frac{a^2}{2} = 0
 > $$
 
 
@@ -250,16 +250,16 @@ vlook-query: ws=off
 > [!important]
 > 
 > ==两类曲线积分的关系==  
-> 第二类曲线积分 $\displaystyle  \int_L \vec{F} \cdot \mathrm{d}\vec{r}$ 与第一类曲线积分 $\displaystyle  \int_L \vec{F} \cdot \vec{\tau} \, \mathrm{d}s$ 通过几何关系紧密联系.其中 $\vec{\tau} = (\cos\alpha, \cos\beta)$ 为曲线 $L$ 的单位切向量，$\alpha, \beta$ 表示切线与坐标轴的夹角.将位移微分 $\mathrm{d}\vec{r} = (\mathrm{d}x, \mathrm{d}y)$ 表示为 $\mathrm{d}\vec{r} = \vec{\tau} \, \mathrm{d}s$，则两类积分可相互转化：
+> 第二类曲线积分 $\displaystyle  \int_L \mathbf{F} \cdot \mathrm{d}\mathbf{r}$ 与第一类曲线积分 $\displaystyle  \int_L \mathbf{F} \cdot \mathbf{\tau}  \mathrm{d}s$ 通过几何关系紧密联系.其中 $\mathbf{\tau} = (\cos\alpha, \cos\beta)$ 为曲线 $L$ 的单位切向量，$\alpha, \beta$ 表示切线与坐标轴的夹角.将位移微分 $\mathrm{d}\mathbf{r} = (\mathrm{d}x, \mathrm{d}y)$ 表示为 $\mathrm{d}\mathbf{r} = \mathbf{\tau} \mathrm{d}s$，则两类积分可相互转化：
 > $$
-> W=\int_L\vec{F}\cdot \mathrm{d}\vec{r}=\int_L\vec{F} \cdot \vec{\tau}\mathrm{d}s
+> W=\int_L\mathbf{F}\cdot \mathrm{d}\mathbf{r}=\int_L\mathbf{F} \cdot \mathbf{\tau}\mathrm{d}s
 > $$
 
 
 
 >[!note]
 >
-> > **例1:已知$\vec{F}=x\hat{i}+y\hat{j}$，求$\displaystyle  W=\int_L\vec{F}\cdot \mathrm{d}\vec{r}$，曲线$L$如下图所示：**
+> > **例1:已知$\mathbf{F}=x\mathbf{i}+y\mathbf{j}$，求$\displaystyle  W=\int_L\mathbf{F}\cdot \mathrm{d} \mathbf{r}$，曲线$L$如下图所示：**
 > > 
 > > 图
 > > **解：**
@@ -267,13 +267,13 @@ vlook-query: ws=off
 W=\int_L\vec{F}\cdot \mathrm{d}\vec{r}=0
 > > $$
 > 
-> > **例2:已知$\vec{F}=-y\hat{i}+x\hat{j}$，求$\displaystyle  W=\int_L\vec{F} \cdot \vec{\tau}\mathrm{d}s$，曲线$L$如下图所示：**
+> > **例2:已知$\mathbf{F}=-y\mathbf{i}+x\mathbf{j}$，求$\displaystyle  W=\int_L\mathbf{F} \cdot \mathbf{\tau}\mathrm{d}s$，曲线$L$如下图所示：**
 > > 
 > > 图
 > > **解法一:**
 > > $$
 \begin{aligned}
-W &= \int_L\vec{F} \cdot \vec{\tau}\mathrm{d}s \\
+W &= \int_L\mathbf{F} \cdot \mathbf{\tau}\mathrm{d}s \\
 &= \int_L \left|F\right | \mathrm{d}s \\
 &= R \cdot 2\pi R\\
 &= 2\pi R^2
@@ -282,21 +282,21 @@ W &= \int_L\vec{F} \cdot \vec{\tau}\mathrm{d}s \\
 > > **解法二:**曲线的参数方程为
 > > $$
 \begin{cases}
-x=Rcos\theta \\
-y=Rsin\theta
+x=R\cos\theta \\
+y=R\sin\theta
 \end{cases}
 > > $$
 > > 则
 > > $$
 \begin{cases}
-\mathrm{d}x=-Rsin\theta \mathrm{d}\theta \\
-\mathrm{d}y=Rcos\theta \mathrm{d}\theta
+\mathrm{d}x=-R\sin\theta \mathrm{d}\theta \\
+\mathrm{d}y=R\cos\theta \mathrm{d}\theta
 \end{cases}
 > > $$
 > > $$
 \begin{aligned}
-W &=\int_0^{2\pi}(-y\cdot -Rsin \theta + x\cdot Rcos \theta)\mathrm{d} \theta \\
-&=\int_0^{2\pi}(R^2sin^2\theta+R^2cos^2\theta)\mathrm{d} \theta \\
+W &=\int_0^{2\pi}(-y\cdot -R\sin \theta + x\cdot R\cos \theta)\mathrm{d} \theta \\
+&=\int_0^{2\pi}(R^2\sin^2\theta+R^2\cos^2\theta)\mathrm{d} \theta \\
 &=\int_0^{2\pi}R^2\mathrm{d} \theta \\
 &= 2\pi R^2
 \end{aligned}
@@ -321,8 +321,8 @@ x = a \cos \theta, \\
 \int_L y^2 \, dx 
 &= \int_L y^2 \mathrm{d}x+0\mathrm{d}y \\
 &= \int_0^\pi -a^2 \sin^2 \theta \cdot a \sin \theta \mathrm{d} \theta \\
-&= a^3 \int_0^\pi (1-cos^2\theta)\mathrm{d}cos\theta \\
-&= a^3[ \left[cos \theta \right]_{0}^\pi -\frac{1}{3}\left[cos^3\theta\right]_{0}^\pi ]\\
+&= a^3 \int_0^\pi (1-\cos^2\theta)\mathrm{d}\cos\theta \\
+&= a^3\left[ \left[\cos \theta \right]_{0}^\pi -\frac{1}{3}\left[cos^3\theta\right]_{0}^\pi \right]\\
 &= -2a^3+\frac{2}{3}a^3 \\
 &= -\frac{4}{3} a^3.
 \end{aligned}
@@ -341,7 +341,7 @@ y=0
 > 
 > > ==例4==
 > > 
-> >计算 $\displaystyle\int_{L} 2xy \mathrm{d}x + x^2 \,mathrm{d}y$，其中 $L$ 为：  
+> >计算 $\displaystyle\int_{L} 2xy \mathrm{d}x + x^2 \mathrm{d}y$，其中 $L$ 为：  
 > >(1) 抛物线 $y = x^2$ 上从 $O(0,0)$ 到 $B(1,1)$ 的一段弧。  
 > > (2) 抛物线 $x = y^2$ 上从 $O(0,0)$ 到 $B(1,1)$ 的一段弧。  
 > >(3) 有向折线 $OAB$（$O(0,0)$, 这里$O,A,B$依次是点$(0,0),(1,0),(1,1)$
@@ -364,14 +364,14 @@ y=\sqrt{x}
 > > $$
 \begin{aligned}
 \int_{L} 2xy \, dx + x^2 \, dy &= \int_{0}^{1} \left(2x \cdot \sqrt{x} + x^2 \cdot \frac{1}{2}\frac{1}{\sqrt{x}}\right) \mathrm{d}x \\
-&= \int_{0}^{1}  (2x^{\frac{3}{2}}+\frac{1}{2}x^{\frac{3}{2}})\mathrm{d}x \\
+&= \int_{0}^{1}  \left(2x^{\frac{3}{2}}+\frac{1}{2}x^{\frac{3}{2}}\right)\mathrm{d}x \\
 &= \left[ x^{\frac{5}{2}} \right]_{0}^{1} \\
 &= 1.
 \end{aligned}
 > > $$
 > > (2) 
 > >  $$
-\int_{L} 2xy \, dx + x^2 \mathrm{d}y = 1
+\int_{L} 2xy \mathrm{d}x + x^2 \mathrm{d}y = 1
 > > $$
 > > (3)  
 > >  线段$L_1:OA$
@@ -394,7 +394,7 @@ y=\sqrt{x}
 ## 特殊情况：梯度场
 
 > [!important]
-> 若存在标量函数 $f(x,y)$ 使得向量场 $\vec{F} = (P, Q)$ 满足：
+> 若存在标量函数 $f(x,y)$ 使得向量场 $\mathbf{F} = (P, Q)$ 满足：
 > $$
 > \frac{\partial f}{\partial x} = P(x,y), \quad \frac{\partial f}{\partial y} = Q(x,y)
 > $$
@@ -407,7 +407,7 @@ y=\sqrt{x}
 > &= f(\text{终点}) - f(\text{起点})
 > \end{aligned}
 > $$
-> 物理意义：此时 $\vec{F} = \nabla f$ 是 $f$ 的梯度场，$f$ 称为势函数。力场做功 $W$ 仅取决于始末位置的势能差：
+> 物理意义：此时 $\mathbf{F} = \nabla f$ 是 $f$ 的梯度场，$f$ 称为势函数。力场做功 $W$ 仅取决于始末位置的势能差：
 > $$
 > W = \Delta f = f_{\text{终}} - f_{\text{起}}
 > $$
@@ -415,9 +415,9 @@ y=\sqrt{x}
 > **关键限制**：并非所有向量场都是保守场。向量场成为梯度场的必要条件是：
 >
 > - **旋度为零**：$\displaystyle  \frac{\partial Q}{\partial x} = \frac{\partial P}{\partial y}$（二维情形）
-> - **路径无关性**：沿任意闭合曲线积分 $\displaystyle  \oint_C \vec{F} \cdot \mathrm{d}\vec{r} = 0$
+> - **路径无关性**：沿任意闭合曲线积分 $\displaystyle  \oint_C \mathbf{F} \cdot \mathrm{d}\mathbf{r} = 0$
 >
-> 例如向量场 $\vec{F} = (-y, x)$ 不满足旋度条件 $\displaystyle  \frac{\partial}{\partial x}(x) \neq \frac{\partial}{\partial y}(-y)$，因此不存在全局势函数。这类场的积分结果将依赖于路径选择。
+> 例如向量场 $\mathbf{F} = (-y, x)$ 不满足旋度条件 $\displaystyle  \frac{\partial}{\partial x}(x) \neq \frac{\partial}{\partial y}(-y)$，因此不存在全局势函数。这类场的积分结果将依赖于路径选择。
 
 
 
@@ -431,20 +431,20 @@ y=\sqrt{x}
 
 
 > [!important]
-> **假如$\vec{F}$是某函数$f$的梯度场**,会有什么结论？以**单连通区域**为前提
+> **假如$\mathbf{F}$是某函数$f$的梯度场**,会有什么结论？以**单连通区域**为前提
 > - 积分与路径无关
-> - $\vec{F}$是保守场，$\displaystyle  \oint_L\vec{F} \cdot \mathrm{d}\vec{r}=0$（对所有封闭曲线$L$）
+> - $\mathbf{F}$是保守场，$\displaystyle  \oint_L\mathbf{F} \cdot \mathrm{d}\mathbf{r}=0$（对所有封闭曲线$L$）
 > 证明：
 > 图
-> $$\displaystyle \int_{C_1}\vec{F} \cdot \mathrm{d}\vec{r}+\int_{C_2}\vec{F} \cdot \mathrm{d}\vec{r}=\int_{C_1}\vec{F} \cdot \mathrm{d}\vec{r}-\int_{-C_2}\vec{F} \cdot \mathrm{d}\vec{r}=0$$
+> $$\displaystyle \int_{C_1}\mathbf{F} \cdot \mathrm{d}\mathbf{r}+\int_{C_2}\mathbf{F} \cdot \mathrm{d}\mathbf{r}=\int_{C_1}\mathbf{F} \cdot \mathrm{d}\mathbf{r}-\int_{-C_2}\mathbf{F} \cdot \mathrm{d}\mathbf{r}=0$$
 
 > [!important]
-> **判定向量场 $\vec{F} = (P(x,y), Q(x,y))$ 是否为梯度场**
-> 若存在函数 $f(x,y)$，使得 $\vec{F}$ 可以表示为该函数的梯度，即：
+> **判定向量场 $\mathbf{F} = (P(x,y), Q(x,y))$ 是否为梯度场**
+> 若存在函数 $f(x,y)$，使得 $\mathbf{F}$ 可以表示为该函数的梯度，即：
 > $$
 > \nabla f = \frac{\partial f}{\partial x} \mathrm{d}x + \frac{\partial f}{\partial y} \mathrm{d}y,
 > $$
-> 则 $\vec{F}$ 是梯度场。此时，$\vec{F}$ 的分量满足：
+> 则 $\mathbf{F}$ 是梯度场。此时，$\mathbf{F}$ 的分量满足：
 > $$
 > P = \frac{\partial f}{\partial x}, \quad Q = \frac{\partial f}{\partial y}.
 > $$
@@ -452,11 +452,11 @@ y=\sqrt{x}
 > $$
 > \frac{\partial^2 f}{\partial x \partial y} = \frac{\partial^2 f}{\partial y \partial x}.
 > $$
-> 将 $\vec{F}$的分量代入，可得：
+> 将 $\mathbf{F}$的分量代入，可得：
 > $$
 > \frac{\partial}{\partial y}\left(\frac{\partial f}{\partial x}\right) = \frac{\partial}{\partial x}\left(\frac{\partial f}{\partial y}\right) \implies \frac{\partial P}{\partial y} = \frac{\partial Q}{\partial x}.
 > $$
-> 因此，**判定$\vec{F}$是梯度场的条件**为：
+> 因此，**判定$\mathbf{F}$是梯度场的条件**为：
 > $$
 > \frac{\partial P}{\partial y} = \frac{\partial Q}{\partial x},
 > $$
@@ -490,7 +490,7 @@ y=\sqrt{x}
 
 > [!important]
 > 
-> **问题1**：已知向量场 $\vec{F} = (y, x)$，求势函数 $f(x,y)$ 满足 $f(0,0)=c$  
+> **问题1**：已知向量场 $\mathbf{F} = (y, x)$，求势函数 $f(x,y)$ 满足 $f(0,0)=c$  
 > **解法**：  
 > 
 > 1. **验证保守性**：检查旋度 $\displaystyle  \frac{\partial P}{\partial y} = 1 = \frac{\partial Q}{\partial x} = 1$，确认场为保守场  
@@ -502,12 +502,12 @@ y=\sqrt{x}
 >    - 沿 $C_2$：$\displaystyle  \int_{C_2} y \, \mathrm{d}x + x \, \mathrm{d}y = \int_0^y x \, \mathrm{d}y = xy$  
 > 4. **合成势函数**：$f(x,y) = 0 + xy + c = xy + c$  
 > 
-> **问题2**：修正向量场 $\vec{F} = (x^2 + axy +3, 3y^2 -2x^2)$ 使其保守 
+> **问题2**：修正向量场 $\mathbf{F} = (x^2 + axy +3, 3y^2 -2x^2)$ 使其保守 
 > **解法**： 
 > 
 > 1. **计算旋度**：$\displaystyle  \frac{\partial P}{\partial y} = ax, \quad \frac{\partial Q}{\partial x} = -4x$
 > 2. **令旋度为零**：$ax = -4x \Rightarrow a = -4$  
-> 3. **修正后的场**：$\vec{F} = (x^2 -4xy +3, 3y^2 -2x^2)$  
+> 3. **修正后的场**：$\mathbf{F} = (x^2 -4xy +3, 3y^2 -2x^2)$  
 
 
 
@@ -517,40 +517,40 @@ y=\sqrt{x}
 > ==旋度（Curl）==  
 > 
 > **旋度定义**  
-> 对平面向量场 $\vec{F} = P(x,y)\hat{i} + Q(x,y)\hat{j}$，其旋度定义为：
+> 对平面向量场 $\mathbf{F} = P(x,y)\mathbf{i} + Q(x,y)\mathbf{j}$，其旋度定义为：
 > $$
-> curl\vec{F}=Q_x-P_y=\frac{\partial Q}{\partial x}-\frac{\partial P}{\partial y}
+> \mathrm{curl}\mathbf{F}=Q_x-P_y=\frac{\partial Q}{\partial x}-\frac{\partial P}{\partial y}
 > $$
 > 
 > 关键性质
 > - **旋度为零 $\Leftrightarrow$ 保守场**  
->   若 $\text{curl}\, \vec{F} = 0$，则存在势函数 $f$ 使得 $\vec{F} = \nabla f$.
+>   若 $\mathrm{curl}\, \mathbf{F} = 0$，则存在势函数 $f$ 使得 $\mathbf{F} = \nabla f$.
 >   
 > ==典型示例分析==
 >  1. 常向量场
-> 设 $\vec{F} = a\hat{i} + b\hat{j}$（$a,b$ 为常数）：
+> 设 $\mathbf{F} = a\mathbf{i} + b\mathbf{j}$（$a,b$ 为常数）：
 > - 计算旋度：
 >   $$
->   \text{curl}\, \vec{F} = \frac{\partial b}{\partial x} - \frac{\partial a}{\partial y} = 0
+>   \mathrm{curl}\, \mathbf{F} = \frac{\partial b}{\partial x} - \frac{\partial a}{\partial y} = 0
 >   $$
 > 2. 辐射状场  
-> 设 $\vec{F} = x\hat{i} + y\hat{j}$：
+> 设 $\mathbf{F} = x\mathbf{i} + y\mathbf{j}$：
 > - 计算旋度：
 >   $$
->   \text{curl}\, \vec{F} = \frac{\partial y}{\partial x} - \frac{\partial x}{\partial y} = 0 - 0 = 0
+>   \mathrm{curl}\, \mathbf{F} = \frac{\partial y}{\partial x} - \frac{\partial x}{\partial y} = 0 - 0 = 0
 >   $$
 > 
 > 3. 旋转场  
-> 设 $\vec{F} = -y\hat{i} + x\hat{j}$：
+> 设 $\mathbf{F} = -y\mathbf{i} + x\mathbf{j}$：
 > - 计算旋度：
 >   $$
->   \text{curl}\, \vec{F} = \frac{\partial x}{\partial x} - \frac{\partial (-y)}{\partial y} = 1 - (-1) = 2
+>   \mathrm{curl}\, \mathbf{F} = \frac{\partial x}{\partial x} - \frac{\partial (-y)}{\partial y} = 1 - (-1) = 2
 >   $$
 
 
 
 > [!tip]
-> 我们喜欢梯度场，因为它具有简洁的数学结构与明确的物理意义，其路径积分结果仅取决于起点和终点，这一特性在解决保守场相关问题时带来了极大便利。然而需要注意的是，$curl{\vec{F}}$是关键概念且它并非梯度场——梯度场的旋度恒为零，而$curl{\vec{F}}$的非零性恰恰刻画了向量场$\vec{F}$的"旋转"特性。对于一般的向量场$\vec{F}$，若想研究其曲线积分，抓住$curl{\vec{F}}$这一核心量是重要突破口：根据斯托克斯定理，向量场沿有向闭曲线的曲线积分等于其旋度通过以该曲线为边界的有向曲面的曲面积分，这一联系使得我们能够通过分析$curl{\vec{F}}$的分布与性质，更高效地求解复杂曲线积分问题，揭示向量场在空间中的动态特征。
+> 我们喜欢梯度场，因为它具有简洁的数学结构与明确的物理意义，其路径积分结果仅取决于起点和终点，这一特性在解决保守场相关问题时带来了极大便利。然而需要注意的是，$curl{\mathbf{F}}$是关键概念且它并非梯度场——梯度场的旋度恒为零，而$curl{\mathbf{F}}$的非零性恰恰刻画了向量场$\mathbf{F}$的"旋转"特性。对于一般的向量场$\mathbf{F}$，若想研究其曲线积分，抓住$curl{\mathbf{F}}$这一核心量是重要突破口：根据斯托克斯定理，向量场沿有向闭曲线的曲线积分等于其旋度通过以该曲线为边界的有向曲面的曲面积分，这一联系使得我们能够通过分析$curl{\mathbf{F}}$的分布与性质，更高效地求解复杂曲线积分问题，揭示向量场在空间中的动态特征。
 > 图
 
 
@@ -559,9 +559,9 @@ y=\sqrt{x}
 > ==格林公式（Green's Theorem）==  
 >
 > **定理表述**  
-> 格林公式建立了平面区域上二重积分与其边界曲线积分之间的深刻联系。设 $C$ 是平面区域 $R$ 的**逆时针方向闭曲线边界**，向量场 $\vec{F} = P(x,y)\hat{i} + Q(x,y)\hat{j}$ 在 $R$ 及其边界上**连续可微**，则：
+> 格林公式建立了平面区域上二重积分与其边界曲线积分之间的深刻联系。设 $C$ 是平面区域 $R$ 的**逆时针方向闭曲线边界**，向量场 $\mathbf{F} = P(x,y)\mathbf{i} + Q(x,y)\mathbf{j}$ 在 $R$ 及其边界上**连续可微**，则：
 > $$
-> \oint_C \vec{F} \cdot \mathrm{d}\vec{r} = \iint_R \text{curl}\, \vec{F} \, \mathrm{d}A
+> \oint_C \mathbf{F} \cdot \mathrm{d}\mathbf{r} = \iint_R \mathrm{curl}\, \mathbf{F} \, \mathrm{d}A
 > $$
 > 其分量形式为：
 > $$
@@ -571,13 +571,13 @@ y=\sqrt{x}
 > **物理意义**  
 > 格林公式揭示了向量场在闭合路径上的"总环流量"（功或通量）与其内部"局部旋转强度"（旋度）的等价性。例如：
 >
-> - 若 $\text{curl}\, \vec{F} > 0$，表明场在区域内存在净逆时针旋转源；  
-> - 若 $\text{curl}\, \vec{F} = 0$，则场无旋（保守场），闭合路径积分为零。
+> - 若 $\mathrm{curl}\, \mathbf{F} > 0$，表明场在区域内存在净逆时针旋转源；  
+> - 若 $\mathrm{curl}\, \mathbf{F} = 0$，则场无旋（保守场），闭合路径积分为零。
 >
 > **核心条件**  
 > 1. **闭合性**：曲线 $C$ 必须闭合且包围区域 $R$（允许有限个"洞"，但需特殊处理）；  
 > 2. **方向性**：默认逆时针方向，若路径为顺时针则结果取负；  
-> 3. **光滑性**：$\vec{F}$ 在 $R$ 内连续可微（若场在区域内有奇点，需挖去奇点后分段计算）。
+> 3. **光滑性**：$\mathbf{F}$ 在 $R$ 内连续可微（若场在区域内有奇点，需挖去奇点后分段计算）。
 
 
 
@@ -641,7 +641,7 @@ y=\sqrt{x}
 > > 又因为，
 > > $$
 > \begin{aligned}
-> \iint_R-P_y \mathrm{d}x\mathrm{d}y&= -\int_a^b[\int_{f_1(x)}^{f_2(x)}\frac{\partial P}{\partial y}\mathrm{d}y]\mathrm{d}x\\
+> \iint_R-P_y \mathrm{d}x\mathrm{d}y&= -\int_a^b\left[\int_{f_1(x)}^{f_2(x)}\frac{\partial P}{\partial y}\mathrm{d}y\right]\mathrm{d}x\\
 > &=-\int_a^b[P(x,f_2(x))-P(x,f_1(x))]\mathrm{d}x
 > \end{aligned}
 > >$$
@@ -649,15 +649,15 @@ y=\sqrt{x}
 
 > [!note]
 > 
-> > **例1:已知$\vec{F}=-y\hat{i}+x\hat{j}$**
+> > **例1:已知$\mathbf{F}=-y\mathbf{i}+x\mathbf{j}$**
 > > 
 > > **解：**由于
 > > $$
-> > curl\vec{F}=1+1=2
+> > \mathrm{curl}\mathbf{F}=1+1=2
 > >$$
 > > 则，
 > >$$
-> > \iint_Dcurl\vec{F}\mathrm{d}A=\iint_D2\mathrm{d}A=2Area=\oint_C-y\mathrm{d}x+x\mathrm{d}y
+> > \iint_D\mathrm{curl}\mathbf{F}\mathrm{d}A=\iint_D2\mathrm{d}A=2Area=\oint_C-y\mathrm{d}x+x\mathrm{d}y
 > >$$
 > 
 > > **例2:计算 $\displaystyle  \oint_L x^2 y \mathrm{d}x - xy^2 \mathrm{d}y$,其中 $L$为正向圆周 $x^2 + y^2 = a^2$.**
@@ -712,11 +712,11 @@ y=\sqrt{x}
 > [!important]
 >
 > ==通量的积分定义==
-> 向量场 $\vec{F} = (P, Q)^T$ 通过平面曲线 $C$ 的流量（通量）定义为场与单位外法向量 $\vec{n}$ 的线积分：
+> 向量场 $\mathbf{F} = (P, Q)^T$ 通过平面曲线 $C$ 的流量（通量）定义为场与单位外法向量 $\mathbf{n}$ 的线积分：
 > $$
 > \displaystyle \text{Flux} = \int_C \vec{F} \cdot \vec{n} \, \mathrm{d}s = \lim_{\Delta s \to 0} \sum_i \vec{F}(x_i,y_i) \cdot \vec{n}_i \Delta s_i
 > $$
-> 通过引入垂直向量场 $\displaystyle \vec{F}^\perp = (-Q, P)$（与 $\vec{F}$ 正交），可将通量转化为第二类曲线积分：
+> 通过引入垂直向量场 $\displaystyle \mathbf{F}^\perp = (-Q, P)$（与 $\mathbf{F}$ 正交），可将通量转化为第二类曲线积分：
 > $$
 > \text{Flux} = \int_C \vec{F}^\perp \cdot \mathrm{d}\vec{r} = \int_C -Q(x,y)\mathrm{d}x + P(x,y)\mathrm{d}y
 > $$
@@ -739,7 +739,7 @@ y=\sqrt{x}
 
 >[!note]
 >
-> > **例1:已知$\vec{F}=x\hat{i}+y\hat{j}$，求$\displaystyle  \int_C\vec{F}\cdot \vec{n}\mathrm{d}s$**
+> > **例1:已知$\mathbf{F}=x\mathbf{i}+y\mathbf{j}$，求$\displaystyle  \int_C\mathbf{F}\cdot \mathbf{n}\mathrm{d}s$**
 > > 
 > > **解:**如图
 > >  图
@@ -764,7 +764,7 @@ div\vec{F}&=\nabla \cdot \vec{F}\\
 > > **例2（没太看懂）**
 > > 
 > > 不可压流体
-> >  $div\vec{F}=0$,$\vec{F}$是速度场，$\nabla \cdot \vec{u}=0$
+> >  $div\mathbf{F}=0$,$\mathbf{F}$是速度场，$\nabla \cdot \mathbf{u}=0$
 > >  Navier-Stokes方程(不可压形式)：
 > >  $$
 \frac{\partial \vec{u}}{\partial t}+\vec{u}\cdot \nabla\vec{u}=-\frac{1}{\rho}\nabla p+\nu\nabla^2\vec{u}+\vec{g}
@@ -783,7 +783,7 @@ div\vec{F}&=\nabla \cdot \vec{F}\\
 >Flux=\iint_S\vec{F}\cdot \vec{n}\mathrm{d}s=\lim_{\Delta s \to 0}\sum_i\vec{F}(x_i,y_i,z_i)\cdot \vec{n_i}\Delta s_i
 >> $$
 >> 注意：$\mathrm{d}s \neq \mathrm{d}A=\mathrm{d}x\mathrm{d}y$
->> 这里，$\vec{F}(x_i,y_i,z_i)\cdot \vec{n_i}$是高，$\Delta s_i$是底面积
+>> 这里，$\mathbf{F}(x_i,y_i,z_i)\cdot \mathbf{n_i}$是高，$\Delta s_i$是底面积
 >
 >> ==数学家视角==
 >> 先看一个简单的例子（特殊情形）：
@@ -822,7 +822,7 @@ div\vec{F}&=\nabla \cdot \vec{F}\\
 >> &=\iint_S\vec{F_1}\cdot \vec{n}\mathrm{d}S+\iint_S\vec{F_2}\cdot \vec{n}\mathrm{d}S+\iint_S\vec{F_3}\cdot \vec{n}\mathrm{d}S
 >> \end{aligned}
 >> $$
->> 以$\vec{F_1}=(0,0,R(x,y,z))^T$为例，$\displaystyle  \vec{v_1}=(\Delta x,0,\frac{\partial z}{\partial x}\Delta x),\vec{v_2}=(0,\Delta y,\frac{\partial z}{\partial y}\Delta y)$
+>> 以$\mathbf{F_1}=(0,0,R(x,y,z))^T$为例，$\displaystyle  \mathbf{v_1}=(\Delta x,0,\frac{\partial z}{\partial x}\Delta x),\mathbf{v_2}=(0,\Delta y,\frac{\partial z}{\partial y}\Delta y)$
 >> 则
 >> $$
 >> \begin{aligned}
@@ -844,7 +844,7 @@ div\vec{F}&=\nabla \cdot \vec{F}\\
 >> &=\iint_{D_{xy}}R(x,y,z)\mathrm{d}x\mathrm{d}y
 >> \end{aligned}
 >> $$
->> $\vec{F_2}=(0,Q(x,y,z),0)^T$同理
+>> $\mathbf{F_2}=(0,Q(x,y,z),0)^T$同理
 >> 要求：$S$的性质比较好，能同时被$(x,y),(y,z),(x,z)$参数化
 
 
@@ -861,7 +861,7 @@ div\vec{F}&=\nabla \cdot \vec{F}\\
 >
 > > ==例1==
 > > 
-> > **已知$\vec{F}=x\hat{i}+y\hat{j}+z\hat{k}$，求$\oiint_{\Sigma}\vec{F}\cdot \vec{n}\mathrm{d}S$**
+> > **已知$\mathbf{F}=x\mathbf{i}+y\mathbf{j}+z\mathbf{k}$，求$\oiint_{\Sigma}\mathbf{F}\cdot \mathbf{n}\mathrm{d}S$**
 > > 
 > > ==解==
 > > $$
@@ -962,7 +962,7 @@ P = (y - z)x,\quad Q = 0,\quad R = x - y,
 > 
 > ==三维空间中的曲线积分==  
 > 
-> 设三维空间中的向量场为 $\vec{F} = P(x,y,z)\hat{i} + Q(x,y,z)\hat{j} + R(x,y,z)\hat{k}$，质点沿曲线 $C$ 运动时，场对质点所做的功可通过第二类曲线积分计算。将曲线分割为微小位移 $\Delta \vec{r} = \Delta x\hat{i} + \Delta y\hat{j} + \Delta z\hat{k}$，其点积形式为：
+> 设三维空间中的向量场为 $\mathbf{F} = P(x,y,z)\mathbf{i} + Q(x,y,z)\mathbf{j} + R(x,y,z)\mathbf{k}$，质点沿曲线 $C$ 运动时，场对质点所做的功可通过第二类曲线积分计算。将曲线分割为微小位移 $\Delta \mathbf{r} = \Delta x\mathbf{i} + \Delta y\mathbf{j} + \Delta z\mathbf{k}$，其点积形式为：
 > $$
 > \vec{F} \cdot \Delta \vec{r} = P\Delta x + Q\Delta y + R\Delta z
 > $$
@@ -976,7 +976,7 @@ P = (y - z)x,\quad Q = 0,\quad R = x - y,
 >
 > > ==例1==
 > > 
-> > **计算$\int_C\vec{F}\cdot \mathrm{d}\vec{r}$,其中，$\vec{F}=(yz,xz,xy) , C:x=t^3,y=t^2,z=t,0\leq t\leq 1$**
+> > **计算$\int_C\mathbf{F}\cdot \mathrm{d}\mathbf{r}$,其中，$\mathbf{F}=(yz,xz,xy) , C:x=t^3,y=t^2,z=t,0\leq t\leq 1$**
 > > 
 > > ==解==
 > > 由题可知
@@ -996,7 +996,7 @@ P = (y - z)x,\quad Q = 0,\quad R = x - y,
 > 
 > > ==例2(路径无关)==
 > > 
-> > **计算$\int_C\vec{F}\cdot \mathrm{d}\vec{r}$**
+> > **计算$\int_C\mathbf{F}\cdot \mathrm{d}\mathbf{r}$**
 > > 
 > > ==解==
 > > 图
@@ -1018,7 +1018,7 @@ P = (y - z)x,\quad Q = 0,\quad R = x - y,
 > $$
 > \mathrm{d}f = P\mathrm{d}x + Q\mathrm{d}y + R\mathrm{d}z = \frac{\partial f}{\partial x}\mathrm{d}x + \frac{\partial f}{\partial y}\mathrm{d}y + \frac{\partial f}{\partial z}\mathrm{d}z
 > $$
-> 则向量场 $\vec{F} = (P, Q, R)$ 为梯度场（保守场），其沿任意曲线 $C$ 的积分仅与端点 $A,B$ 有关：
+> 则向量场 $\mathbf{F} = (P, Q, R)$ 为梯度场（保守场），其沿任意曲线 $C$ 的积分仅与端点 $A,B$ 有关：
 > $$
 > \int_C P\mathrm{d}x + Q\mathrm{d}y + R\mathrm{d}z = \int_C \mathrm{d}f = f(B) - f(A)
 > $$
@@ -1034,17 +1034,17 @@ P = (y - z)x,\quad Q = 0,\quad R = x - y,
 > $$
 > 这些条件等价于向量场的**旋度为零**：
 > $$
-> \nabla \times \vec{F} = 
+> \nabla \times \mathbf{F} = 
 > \begin{vmatrix}
 > \hat{i} & \hat{j} & \hat{k} \\
 > \partial_x & \partial_y & \partial_z \\
 > P & Q & R
 > \end{vmatrix}
-> = (R_y - Q_z)\hat{i} + (P_z - R_x)\hat{j} + (Q_x - P_y)\hat{k} = \vec{0}
+> = (R_y - Q_z)\hat{i} + (P_z - R_x)\hat{j} + (Q_x - P_y)\hat{k} = \mathbf{0}
 > $$
 >==以下条件等价==
 >
->> - $curl\vec{F}=0$
+>> - $curl\mathbf{F}=0$
 >> - 梯度场
 >> - 条件(*)
 >> - 路径无关
@@ -1054,17 +1054,17 @@ P = (y - z)x,\quad Q = 0,\quad R = x - y,
 >
 > > ==例1==
 > > 
-> > **已知$P=yz,Q=xz,R=xy$,计算$curl\vec{F}$**
+> > **已知$P=yz,Q=xz,R=xy$,计算$curl\mathbf{F}$**
 > > 
 > > ==解==
 > >  $$
 Q_x=z,P_y=z \\ R_y=x,Q_z=x \\ R_x=y,P_z=y
 > >  $$
 > >  故
-> >  $curl\vec{F}=0$
+> >  $curl\mathbf{F}=0$
 
 >[!important]
-> ==$curl \vec{F}$的意义==(这里也没太明白)
+> ==$curl \mathbf{F}$的意义==(这里也没太明白)
 > 图
 > $$
 \vec{F}=(-y,x,0)
@@ -1086,8 +1086,8 @@ curl \vec{F}=\nabla \times \vec{F}=
 |  | 3D | 2D |
 |:------|:------|:------|
 |grad|$\nabla f=(f_x,f_y,f_z)^T$|$\nabla f=(f_x,f_y,)^T$|
-|div|$\nabla \cdot \vec{F}=\frac{\partial P}{\partial x}+\frac{\partial Q}{\partial y}+\frac{\partial R}{\partial z}$|$\nabla \cdot \vec{F}=\frac{\partial P}{\partial x}+\frac{\partial Q}{\partial y}$|
-|curl|$\nabla \times \vec{F}= \begin{matrix} \hat{i} & \hat{j} & \hat{k} \\ \frac{\partial}{\partial x} & \frac{\partial}{\partial y} & \frac{\partial}{\partial z} \\P & Q & R \end{matrix} $|$\nabla \times \vec{F}= \begin{matrix} \frac{\partial}{\partial x} & \frac{\partial}{\partial y} \\ P & Q \end{matrix} $|
+|div|$\nabla \cdot \mathbf{F}=\frac{\partial P}{\partial x}+\frac{\partial Q}{\partial y}+\frac{\partial R}{\partial z}$|$\nabla \cdot \mathbf{F}=\frac{\partial P}{\partial x}+\frac{\partial Q}{\partial y}$|
+|curl|$\nabla \times \mathbf{F}= \begin{matrix} \mathbf{i} & \mathbf{j} & \mathbf{k} \\ \frac{\partial}{\partial x} & \frac{\partial}{\partial y} & \frac{\partial}{\partial z} \\P & Q & R \end{matrix} $|$\nabla \times \mathbf{F}= \begin{matrix} \frac{\partial}{\partial x} & \frac{\partial}{\partial y} \\ P & Q \end{matrix} $|
 > - 3D:Gauss公式
 > $$
 \iiint_{D}div\vec{F}\mathrm{d}v=\oiint_S \vec{F} \ cdot \vec{n}\mathrm{d}S
@@ -1161,7 +1161,7 @@ I =  -\frac{9}{2}.
 > > $$
 
 ## 总结
-|$\iiint_Df(x,y,z)\mathrm{d}v$|$\iint_S\vec{F}\cdot \vec{n}\mathrm{d}S$|$\int_C\vec{F}\cdot \mathrm{d}\vec{r}$|
+|$\iiint_Df(x,y,z)\mathrm{d}v$|$\iint_S\mathbf{F}\cdot \mathbf{n}\mathrm{d}S$|$\int_C\mathbf{F}\cdot \mathrm{d}\mathbf{r}$|
 |---|---|---|
 |体积|flux|work|
 |多重积分|$\iint_SP\mathrm{d}x\mathrm{d}y+Q\mathrm{d}y\mathrm{d}z+R\mathrm{d}y\mathrm{d}x$|$\int_CP\mathrm{d}x+Q\mathrm{d}y+R\mathrm{d}z$|
