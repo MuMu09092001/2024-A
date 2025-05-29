@@ -443,7 +443,7 @@ $$
 > >  **解:**
 > >  方法一：
 > >  $$
-|\vec{\mathbf{\omega_1}}\times\vec{\mathbf{\omega_2}}|=|\vec{\mathbf{\omega_1}}|\cdot |\vec{\mathbf{\omega_2}}|\cdot \sin\theta=
+|\mathbf{\omega_1}\times\mathbf{\omega_2}|=|\mathbf{\omega_1}|\cdot |\mathbf{\omega_2}|\cdot \sin\theta=
 \begin{vmatrix}
 3 & -2\\
 1 & 1
